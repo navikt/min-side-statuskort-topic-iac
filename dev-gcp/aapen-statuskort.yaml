@@ -1,0 +1,26 @@
+apiVersion: kafka.nais.io/v1
+kind: Topic
+metadata:
+  name: aapen-statuskort-v1
+  namespace: min-side
+  labels:
+    team: min-side
+spec:
+  pool: nav-dev
+  config:
+    cleanupPolicy: delete
+    minimumInSyncReplicas: 2
+    partitions: 4
+    replication: 3
+    retentionBytes: -1
+    retentionHours:  336 # 24*14
+  acl:
+    - team: min-side
+      application: tms-statuskort
+      access: read
+    - team: min-side
+      application: tms-event-test-producer
+      access: write
+    - team: min-side
+      application: tms-kafka-dashboard
+      access: read
