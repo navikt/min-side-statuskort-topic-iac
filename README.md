@@ -1,29 +1,21 @@
-# min-side-brukervarsel-topic
+# min-side-statuskort-topic
 
-Repo med configurasjon for hvem som kan produsere og konsumere fra åpent brukervarsel-topic
+Repo med configurasjon for hvem som kan produsere til statuskort-topic
 
 Mer info i [dokumentasjonen](https://navikt.github.io/tms-dokumentasjon/varsler/).
 
 ## Topics og hensikt
 
-- `aapen-brukervarsel-v1` er ment for å produsere/inaktivere eller på andre vis endre varsler.
-- `aapen-varsel-hendelse-v1` kan brukes av produsenter for å lytte på f. eks. når bruker inaktiverer en beskjed, eller status på ekstern varsling.
+- `aapen-brukervarsel-v1` er ment for å opprette og endre statuskort
 
 ## Hvordan få tilgang til topic?
 
 **For skrivetilgang**
 
 ```
-        - team: myTeam
-          application: myApplication
-          access: write 
-```
-**For lesetilgang**
-
-```
-        - team: myTeam
-          application: myApplication
-          access: read 
+    - team: myTeam
+      application: myApplication
+      access: write 
 ```
 
 ## Hvordan bumper jeg topic-en?
